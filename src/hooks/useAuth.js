@@ -22,7 +22,7 @@ const useAuth = () => {
 
                     const getUser = async () => {
                         // const Authentication = JSON.parse(localStorage.getItem("token"))
-                        const res = await fetch("http://localhost:5000/getuser", {
+                        const res = await fetch("https://digi-storebackend.vercel.app/getuser", {
                             method: "GET",
                             headers: {
                                 "Authentication": Authentication
@@ -60,7 +60,7 @@ const useAuth = () => {
 
     const signUp = async (user) => {
         try {
-            const res = await fetch("http://localhost:5000/signup", {
+            const res = await fetch("https://digi-storebackend.vercel.app/signup", {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json"
@@ -95,7 +95,7 @@ const useAuth = () => {
             const email = JSON.parse(localStorage.getItem("email"))
          
             
-            const res = await fetch('http://localhost:5000/verifyemail',{
+            const res = await fetch('https://digi-storebackend.vercel.app/verifyemail',{
                 method:"POST",
                 headers:{
                     "content-Type": "application/json",
@@ -127,7 +127,7 @@ const useAuth = () => {
 
         try {
             const userInfo = { email, password }
-            const res = await fetch("http://localhost:5000/login", {
+            const res = await fetch("https://digi-storebackend.vercel.app/login", {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json"
@@ -160,7 +160,7 @@ const useAuth = () => {
     // ---------------------------------------log out ------------------------------------------------------------------------------
     const logOut = async () => {
         const Authentication = JSON.parse(localStorage.getItem("token"))
-        const res = await fetch("http://localhost:5000/logout", {
+        const res = await fetch("https://digi-storebackend.vercel.app/logout", {
             method: "GET",
             headers: {
                 "Authentication": Authentication

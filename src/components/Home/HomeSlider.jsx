@@ -5,7 +5,7 @@ const HomeSlider = ({data}) => {
    
     return (
         <div className='slider'>
-            <img src={"http://localhost:5000/getsliderimage/" + data} alt="" />
+            <img src={"https://digi-storebackend.vercel.app/getsliderimage/" + data} alt="" />
 
             
         </div>

@@ -74,7 +74,7 @@ const Checkout = () => {
         }
         try {
             const Authentication = JSON.parse(localStorage.getItem("token"))
-            const res = await fetch('http://localhost:5000/addtemporaryorder', {
+            const res = await fetch('https://digi-storebackend.vercel.app/addtemporaryorder', {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json",

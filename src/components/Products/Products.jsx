@@ -29,7 +29,7 @@ const Products = () => {
     setSkipValue()
     useEffect(() => {
         const modifiedPathName = location.pathname.toString().slice(11)
-        fetch(`http://localhost:5000/getproducts${modifiedPathName}${location.search}?show=${show}&skip=${skip}`).
+        fetch(`https://digi-storebackend.vercel.app/getproducts${modifiedPathName}${location.search}?show=${show}&skip=${skip}`).
             then(res => res.json()).
             then(data => {
                 setProducts(data.product)

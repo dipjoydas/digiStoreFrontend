@@ -6,7 +6,7 @@ const PurchaseHistory = () => {
         const getOrderHistory = async () => {
             try {
                 const Authentication = JSON.parse(localStorage.getItem("token"))
-                const res = await fetch('http://localhost:5000/orderhistory', {
+                const res = await fetch('https://digi-storebackend.vercel.app/orderhistory', {
                     method: "GET",
                     headers: {
                         "Authentication": Authentication

@@ -13,7 +13,7 @@ const Payment = () => {
     const Authentication = JSON.parse(localStorage.getItem("token"))
     useEffect(() => {
         (async () => {
-            const res = await fetch(`http://localhost:5000/gettempoorder/${id}`, {
+            const res = await fetch(`https://digi-storebackend.vercel.app/gettempoorder/${id}`, {
                 headers: {
                     "Authentication": Authentication
                 }

@@ -11,7 +11,7 @@ const FeaturesProduct = () => {
     const { addToCompare } = useCompareContext()
 
     useEffect(() => {
-        fetch('http://localhost:5000/featuresproduct')
+        fetch('https://digi-storebackend.vercel.app/featuresproduct')
             .then(response => response.json())
             .then(data => setFeaturesProducts(data))
     }, [])

@@ -7,7 +7,7 @@ const FeaturedCategory = (props) => {
     return (
         
             <div className='category'>
-            <img src={`http://localhost:5000/getfcimage/${img}`} alt="" />
+            <img src={`https://digi-storebackend.vercel.app/getfcimage/${img}`} alt="" />
             <p><Link to={`categories/${url}`}>{des}</Link> </p>
             
         </div>

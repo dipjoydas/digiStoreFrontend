@@ -23,7 +23,7 @@ const AddToCart = ({ hideCart }) => {
         const itemKeys = Object.keys(cart)
         const newProudctArray = [...displayCart]
         itemKeys.map(async (key) => {
-            const res = await fetch(`http://localhost:5000/product/${key}`)
+            const res = await fetch(`https://digi-storebackend.vercel.app/product/${key}`)
             const result = await res.json();
             const { _id, title, price, img } = result
           
@@ -74,7 +74,7 @@ const AddToCart = ({ hideCart }) => {
 
             {
                 displayCart.map((product, index) => <div key={index} className='cartItem'>
-                    <img src={`http://localhost:5000/getimage/${product.img}`} alt="" />
+                    <img src={`https://digi-storebackend.vercel.app/getimage/${product.img}`} alt="" />
                     <div>
                         <h6>{product.title}</h6>
                         {product.price} x {product.quantity} = {+product.price * +product.quantity}

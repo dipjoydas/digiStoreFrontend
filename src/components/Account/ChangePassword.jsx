@@ -11,7 +11,7 @@ const ChangePassword = () => {
         const newPassword = nP.current.value
         try {
             const Authentication = JSON.parse(localStorage.getItem("token"))
-            const res = await fetch('http://localhost:5000/changepassword', {
+            const res = await fetch('https://digi-storebackend.vercel.app/changepassword', {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json",

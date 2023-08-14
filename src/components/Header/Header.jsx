@@ -19,7 +19,7 @@ const Header = () => {
     
     useEffect(() => {
 
-        fetch('http://localhost:5000/productcategory')
+        fetch('https://digi-storebackend.vercel.app/productcategory')
             .then(response => response.json())
             .then(data => setCategorydata(data))
 
@@ -305,7 +305,7 @@ const Header = () => {
     const handleSearch = async (e) => {
         const searchValue = e.target.value
         try {
-            const res = await fetch(`http://localhost:5000/productsearch?search=${searchValue}`)
+            const res = await fetch(`https://digi-storebackend.vercel.app/productsearch?search=${searchValue}`)
             const result = await res.json()
 
             setSearchResult(result)
@@ -358,7 +358,7 @@ const Header = () => {
                         {searchResult?.map((product, index) => <Link to={`/productdetails/${product._id}`} onClick={clearInput}>
                             <div key={index} className='sRItem'>
                                 <div className='imgContainer'>
-                                    <img src={"http://localhost:5000/getimage/" + product.img} alt="" />
+                                    <img src={"https://digi-storebackend.vercel.app/getimage/" + product.img} alt="" />
 
                                 </div>
                                 <div className='sRTextContainer'>
@@ -455,7 +455,7 @@ const Header = () => {
                             {searchResult?.map((product, index) => <Link to={`/productdetails/${product._id}`} onClick={clearInput}>
                                 <div key={index} className='sRItem'>
                                     <div className='imgContainer'>
-                                        <img src={"http://localhost:5000/getimage/" + product.img} alt="" />
+                                        <img src={"https://digi-storebackend.vercel.app/getimage/" + product.img} alt="" />
 
                                     </div>
                                     <div className='sRTextContainer'>

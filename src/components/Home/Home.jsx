@@ -13,15 +13,15 @@ const Home = () => {
     const [featuredImages, setFeaturedImages] = useState()
     useEffect(() => {
 
-        fetch('http://localhost:5000/homeslider')
+        fetch('https://digi-storebackend.vercel.app/homeslider')
             .then(response => response.json())
             .then(data => setImages(data))
 
-        fetch('http://localhost:5000/featurescategory')
+        fetch('https://digi-storebackend.vercel.app/featurescategory')
             .then(response => response.json())
             .then(data => setCategory(data))
 
-        // fetch('http://localhost:5000/featuredimages')
+        // fetch('https://digi-storebackend.vercel.app/featuredimages')
         //     .then(response => response.json())
         //     .then(data => setFeaturedImages(data))
 
@@ -56,7 +56,7 @@ const Home = () => {
                         {
                             featuredImages?.map((item,index)=><> 
                             {console.log(item,'featured images id checking')}
-                            <img src={`http://localhost:5000/getfeaturedimage/${item}`} alt="" /></>)
+                            <img src={`https://digi-storebackend.vercel.app/getfeaturedimage/${item}`} alt="" /></>)
                         }
                     </div> */}
 

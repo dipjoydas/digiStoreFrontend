@@ -19,7 +19,7 @@ const LogIn = () => {
         // ---------------------------------------------------------------------------
         try {
             const userInfo = { email, password }
-            const res = await fetch("http://localhost:5000/login", {
+            const res = await fetch("https://digi-storebackend.vercel.app/login", {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json"
@@ -38,7 +38,7 @@ const LogIn = () => {
                 const result = await res.json()
             setUser(result.user)
             
-                console.log(user, ' user from log up')
+       
             const token = `Bearer ${result.token}`
             const stringifiedToken = JSON.stringify(token)
 

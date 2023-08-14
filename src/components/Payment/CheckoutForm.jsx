@@ -14,7 +14,7 @@ const CheckoutForm = ({ appoinment }) => {
     const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://digi-storebackend.vercel.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -84,7 +84,7 @@ const CheckoutForm = ({ appoinment }) => {
                 const order = appoinment
                 order.transaction = transaction
               
-                const res = await fetch(`http://localhost:5000/updateorder/${_id}`, {
+                const res = await fetch(`https://digi-storebackend.vercel.app/updateorder/${_id}`, {
                     method: "PUT",
                     headers: {
                         "content-Type": "application/json",

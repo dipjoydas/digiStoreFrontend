@@ -12,7 +12,7 @@ const ForgetPassword = () => {
         e.preventDefault()
         const emailValue = email.current.value
         try {
-            const res = await fetch('http://localhost:5000/getresetcode', {
+            const res = await fetch('https://digi-storebackend.vercel.app/getresetcode', {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json",
@@ -38,7 +38,7 @@ const ForgetPassword = () => {
 
         e.preventDefault()
         try {
-            const res = await fetch('http://localhost:5000/resetpassword', {
+            const res = await fetch('https://digi-storebackend.vercel.app/resetpassword', {
                 method: "POST",
                 headers: {
                     "content-Type": "application/json",

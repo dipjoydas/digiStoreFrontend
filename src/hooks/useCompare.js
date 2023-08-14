@@ -9,7 +9,7 @@ const useCompare = () => {
     const addToCompare = async(id)=>{
         
             try {
-                const res = await fetch("http://localhost:5000/product/" + id)
+                const res = await fetch("https://digi-storebackend.vercel.app/product/" + id)
                 const result = await res.json()
                 setCompareProducts([...compareProducts,result])
                     setToastContent("Added to compare")

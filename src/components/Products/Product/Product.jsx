@@ -16,7 +16,7 @@ const Product = ({data ,addToCompare}) => {
     return (
         <div className='productContainer'>
             <div className='imgContainer'>
-                <img src={`http://localhost:5000/getimage/${img}`} alt="" />
+                <img src={`https://digi-storebackend.vercel.app/getimage/${img}`} alt="" />
                 
 
             </div>

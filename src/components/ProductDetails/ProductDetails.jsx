@@ -19,7 +19,7 @@ const ProductDetails = () => {
     useEffect(() => {
         const productFetch = async () => {
             try {
-                const res = await fetch("http://localhost:5000/product/" + id)
+                const res = await fetch("https://digi-storebackend.vercel.app/product/" + id)
                 const result = await res.json()
                 setProductDetails(result)
 
@@ -74,7 +74,7 @@ const ProductDetails = () => {
         const Authentication = JSON.parse(localStorage.getItem("token"))
 
         try {
-            const res = await fetch(`http://localhost:5000/addreview/${id}`, {
+            const res = await fetch(`https://digi-storebackend.vercel.app/addreview/${id}`, {
                 method: "PUT",
                 headers: {
                     "content-Type": "application/json",
@@ -216,7 +216,7 @@ const ProductDetails = () => {
                     })
                   
                     
-                        const res = await fetch(`http://localhost:5000/getrvp`,{
+                        const res = await fetch(`https://digi-storebackend.vercel.app/getrvp`,{
                             method:"POST",
                             headers:{
                                 "content-Type": "application/json"
@@ -257,7 +257,7 @@ const ProductDetails = () => {
         <div style={{ background: "#F2F4F8" }}>
             <div className='PDTopBanner'>
                 <div className='PDImgContainer'>
-                    <img src={"http://localhost:5000/getimage/" + img} alt="" />
+                    <img src={"https://digi-storebackend.vercel.app/getimage/" + img} alt="" />
 
                 </div>
                 <div className='PDTextContainer'>
@@ -347,7 +347,7 @@ const ProductDetails = () => {
                     <div className='rVPContainer'>
                         {rVPState?.map((rvp, index) => <div key={index} className='itemContainer'>
                             <div className='imgContainer'>
-                                <img src={`http://localhost:5000/getimage/${rvp.img}`} alt="" />
+                                <img src={`https://digi-storebackend.vercel.app/getimage/${rvp.img}`} alt="" />
                             </div>
                             <div className='textContainer'>
                                 <Link to={`/productdetails/${rvp.id}`}>{rvp.title}</Link>

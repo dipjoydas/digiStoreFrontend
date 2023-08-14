@@ -164,7 +164,7 @@ const CompareProduct = () => {
                             <td></td>
                             {compareProducts?.map((product, index) =>
                                 <td key={index}>
-                                    <img src={"http://localhost:5000/getimage/" + product.img} alt="" /> <br></br>
+                                    <img src={"https://digi-storebackend.vercel.app/getimage/" + product.img} alt="" /> <br></br>
                                     <Link to={`/productdetails/${product._id}`}>{product.title}</Link>
 
 

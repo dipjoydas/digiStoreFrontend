@@ -11,7 +11,7 @@ const Orders = () => {
     useEffect(()=>{
         const Authentication = JSON.parse(localStorage.getItem("token"))
         const getOrders = async()=>{
-            const res = await fetch('http://localhost:5000/orders',{
+            const res = await fetch('https://digi-storebackend.vercel.app/orders',{
                 method:"GET",
                 headers: {
                     "Authentication": Authentication
