@@ -1,0 +1,14 @@
+table , td ,tr {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+   
+}
+.CPTableContainer {
+    width: 100vw;
+    overflow: scroll;
+}
+
+.delete {
+    color: red;
+    text-align: center;
+    cursor: pointer;
+}

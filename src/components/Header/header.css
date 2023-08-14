@@ -1,0 +1,527 @@
+:root {
+    --header1Bg:#081621 ;
+    --header1FontColor:white
+
+}
+.header1 {
+    height: 8rem;
+   
+    
+}
+.header1 {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: var(--header1Bg);
+   
+}
+
+.inputContainer {
+    position: relative;
+}
+
+.inputContainer input[type=text]{
+    border: none;
+    width: 40rem;
+    border-radius: 6px ;
+    /* height: 50%; */
+   
+    padding: .6rem ;
+   
+}
+.logoContainer {
+    height: 70%;
+}
+.logoContainer img {
+    height: 100%;
+}
+
+.inputContainer input[type=submit] {
+    border: none;
+    color: white;
+    /* height: 50%; */
+    padding: .6rem ;
+    border-radius: 0 6px 6px 0;
+    background-color: rgb(88, 88, 173);
+    cursor: pointer;
+}
+
+
+/* --------------------------------------------------------searchResultContainer designn ----------------------------------------- */
+.searchResultContainer {
+    position: absolute;
+    /* bottom: 0px; */
+    top: 100%;
+    width: 100%;
+    /* left: 1%; */
+    z-index: 2000;
+    background-color: whitesmoke;
+    padding:0 1rem ;
+ 
+}
+.searchResultContainer .sRItem {
+    display: flex;
+    border: solid gray .4px;
+    padding: .4rem .3rem;
+    align-items: center;
+    
+    /* height: 6rem; */
+    min-height: 6rem;
+
+}
+.searchResultContainer .sRItem .imgContainer {
+    width: 6rem;
+    flex: 0 0 auto;
+}
+.searchResultContainer .sRItem .imgContainer img {
+    width: 100%;
+    height: 4rem;
+}
+
+
+.link {
+    font-size: 1.5rem;
+    color: var(--header1FontColor);
+    padding: 0 10px;
+    font-weight: bold ;
+
+}
+
+/* header 2 design /////////////////////////////////////////////////////////// */
+
+
+
+.header2 {
+    height: 5rem;
+    border: solid black 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+   
+}
+
+.header2 .link {
+    display: block;
+}
+.header2 .dropdown {
+    position: relative;
+    padding: 0 5px;
+    height: 100%;
+    z-index: 1500;
+  
+}
+.header2 .dropbtn {
+    position: relative;
+    
+    
+    top: 25%;
+}
+.header2 .dropdown:hover .dropbtn {
+    color: orangered;
+    /* background-color: white; */
+}
+.header2 .dropdown2:hover .dropdownbtn2 {
+    background-color: orangered;
+    color: white;
+}
+.header2 .dropdownContent {
+    position: absolute;
+    top: 100%;
+    width:200px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 4px gray;
+}
+.header2 .dropdown2 .link:hover {
+    background-color: orangered;
+    color: white;
+}
+.dropdown2 {
+    position: relative;
+}
+.dropdownContent2 {
+    position: absolute;
+    width: fit-content;
+    top: 0%;
+   
+    
+    box-shadow: 2px 2px 3px gray;
+    background-color: white;
+}
+
+
+.header2 .dropdownContent,.dropdownContent2 {
+    display: none;
+}
+.header2 .dropdown:hover .dropdownContent {
+    display: block;
+}
+.header2 .dropdown2:hover .dropdownContent2 {
+   
+    display: block;
+}
+
+.dropdown .link {
+    color: black;
+}
+
+
+/* responsive header design  */
+
+.resHeader1 {
+    position: relative;
+    height: 5rem;
+    padding: 0 2rem 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: black;
+}
+
+ /* hamberger design -----------------------------------------------------------------*/
+.hambergerContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 4rem;
+    cursor: pointer;
+    transition: all .3 ease-in-out;
+}
+.menuhumberger {
+    width: 3.5rem;
+    height: .4rem;
+    background:white;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 5px rgba(255, 101, 47,.2) ; */
+    transition: all .3s ease-in-out;
+    /* border: solid blue 2px; */
+}
+.menuhumberger::before, .menuhumberger::after {
+    content: '';
+    position: absolute;
+    width: 3.5rem;
+    
+    height:.4rem;
+    background: white;
+    border-radius: .4rem;
+    box-shadow: 0 2px 5px rgba(255, 101, 47,.2) ;
+    transition: all .3s ease-in-out;
+
+}
+.menuhumberger::before {
+    transform: translateY(-1.6rem);
+}
+.menuhumberger::after {
+   
+    transform: translateY(1.6rem);
+}
+/* animaton part */
+.hambergerContainer.open .menuhumberger {
+    /* transform: translateX(-50px); */
+    background: transparent;
+
+
+}
+.hambergerContainer.open .menuhumberger::before {
+    transform: translateY(0) rotate(45deg);
+
+}
+.hambergerContainer.open .menuhumberger::after {
+    transform: translateY(0) rotate(-45deg);
+
+}
+.lastContainer {
+    height: 100%;
+    /* position: relative; */
+   
+   
+    
+}
+.resHeader1 .lastContainer .dashbord{
+    position: relative;
+    top:-30%;
+
+    display: inline-block;
+    color: white;
+    height: 100%;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    
+   
+
+    
+    
+
+}
+.resHeader1 .lastContainer .searchbtn {
+   
+} 
+.resSearchBar {
+    /* border: solid red 2px; */
+    width: 100vw;
+    position: absolute;
+  
+   
+    left: 0;
+    top: 100%;
+   
+    z-index: 100;
+    display: none;
+    height: 4.7rem;
+
+}
+.resSearchBar.active {
+    display: block;
+}
+.resinputField {
+    width: 100%;
+    height: 100%;
+    padding: 1.6rem;
+
+}
+
+
+/* icon design  */
+
+.resHeader1 .lastContainer .icon {
+    font-size: 2rem;
+    color: white;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+/* category content design /////////////////////////////////////////////*/
+.accordionsContainer {
+    position: relative;
+    background-color:#eee ;
+    width: 200px;
+    max-width: 80vw;
+    animation: animateLeftToRight 1s  linear;
+}
+.accordionContainer {
+    color: black;
+    font-size: 1.5rem;
+    width: 100%;        
+    background-color: #eee;
+    border-bottom: solid  #ccc 1px;
+
+   
+
+    /* width: 300px; */
+}
+/* testing purpose design of accoordion */
+.link.res {
+    color: black;
+    font-weight: normal;
+}
+.link.res:hover {
+    color: orangered;
+}
+
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    /* width: 100%; */
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+
+
+  .active, .accordion:hover {
+    /* background-color: #ccc; */
+    color: orangered;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 1.3rem;
+    color: #777;
+    float: right;
+    margin-left: .5rem;
+  }
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+
+
+  .panel {
+    padding: 0 1.8rem;
+    /* background-color: white; */
+    display: none;
+    overflow: hidden;
+  }
+
+
+  /* modal design  -----------------------------------------------------------------------------------------------*/
+
+  .modal {
+    display: none; 
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 5rem;
+    width: 100%; /* Full width */
+    /* min-height: 100vw; */
+    height: 100vh; 
+    overflow-y: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  
+
+  /* modal animation --------------------------------------------------------------------------------------------- */
+
+  @keyframes animateLeftToRight {
+    0% {
+        left: -100%;
+        opacity: 0;
+
+    }
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+    
+  }
+
+
+  /* hide scroll bar  ----------------------------------------------------------------------------------------*/
+  .modal::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .modal {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+  /* responsive header 2 design    */
+
+  .resHeader2 {
+    height: 5rem;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background:black ;
+    z-index: 1000;
+  }
+
+
+
+
+
+
+  /*------------------------------------------------------------ media queries--------------------------------------- --------------- */
+
+  @media all and (max-width:1200px) {
+    .header .resHeader1 {
+        display: flex;
+    }
+    .header .resHeader2{
+        display: flex;
+    }
+    .header .header1 {
+        display: none;
+
+    }
+    .header .header2 {
+        display: none;
+    }
+
+
+    
+  }
+  /* add to cart part /////////////////////////////////////////////////////// */
+  .trigerAddToCart{
+    width: 5rem;
+    height: 5rem;
+    /* border: solid red 2px; */
+    position: fixed;
+    bottom: 200px;
+    right: 100px;
+    z-index: 5000;
+    display: none;
+
+  }
+  .trigerAddToCart * {
+    cursor: pointer;
+  
+    color: black;
+  }
+
+  .compare {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    bottom: 150px;
+    right: 100px;
+    z-index: 1000;
+    display: none;
+
+  }
+  .compare * {
+    color: black;
+  }
+  /* toast design */
+  .toast {
+    position: fixed;
+    top:100px;
+    right: 40px;
+    width: 240px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+   
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+
+
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+  @media screen and (min-width:1200px){
+    .header .header1 {
+        display: flex;
+
+    }
+    .header .header2 {
+        display: flex;
+    }
+    .header .resHeader1 {
+        display: none;
+    }
+    .header .resHeader2{
+        display: none;
+    }
+    .trigerAddToCart {
+        display: block;
+    }
+    .compare {
+        display: block;
+    }
+  }

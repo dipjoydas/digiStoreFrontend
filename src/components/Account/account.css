@@ -1,0 +1,39 @@
+.accountContainer {
+    display: flex;
+    /* min-height: 100vh; */
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+  
+
+}
+.navigator {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+.navigator div {
+    width: 100%;
+    padding: 1rem;
+    border: solid gray .5px;
+    background-color: white;
+}
+.accountContainer .details {
+    width: 80%;
+    /* border: solid red 1px; */
+}
+
+@media screen and (max-width:450px) {
+    .accountContainer {
+        padding: 0 1rem;
+    }
+    .navigator {
+        flex-direction: row;
+        width: 100%;
+    }
+  
+    
+}

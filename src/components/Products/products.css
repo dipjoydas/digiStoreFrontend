@@ -1,0 +1,51 @@
+
+.productsContainer {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    grid-gap: 1.5rem;
+}
+.soringContainer {
+    padding: 2rem;
+   margin: .7rem 1.8rem;
+   box-shadow: 2px 2px 5px gray;
+   background-color: white;
+}
+.soringContainer label {
+    font-size: 1.5rem;
+}
+.soringContainer div{
+    position: relative;
+    float: right;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pagination {
+    /* margin: 3rem; */
+    text-align: center;
+}
+.pagination button {
+    padding: 1rem;
+    margin: 0 .5rem;
+}
+.pagination .selected {
+    background-color: orangered;
+    color: white;
+}
+/* responsive  */
+/* for tabtel   */
+@media screen and (max-width:768px) {
+    .productsContainer {
+        grid-template-columns: repeat(auto-fit ,minmax(200px ,1fr));
+       
+    }
+    
+}
+/* for phone ---------------------------------------------- */
+@media screen and (max-width:480px) {
+    .productsContainer {
+        grid-template-columns: repeat(auto-fit ,minmax(150px ,1fr));
+        
+    }
+    
+}

@@ -1,0 +1,51 @@
+.checkoutContainer input[type=submit]{
+    width: 15rem;
+    height: 4rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    
+}
+
+
+.userInfo {
+    text-align: center;
+    width: 100%;
+    
+    
+}
+.userInfo h1 {
+    margin: 1rem 0;
+}
+/* .userInfo form {
+    display: block;
+    width: 400px;
+    border: blue 2px solid;
+    text-align: center;
+} */
+.userInfo input {
+    width: 400px;
+    height: 300px;
+    
+    max-width: 80vw;
+    height: 3rem;
+    margin: .5rem;
+    text-align: center;
+}
+.userInfo textarea {
+    border: solid grey 1px;
+    width: 400px;
+    max-width: 80vw;
+
+}
+.voucherContainer {
+    width: 100%;
+    padding: 1rem;
+}
+.voucherContainer input {
+    width: 20rem;
+    height: 3rem;
+
+}
+.voucherContainer input[type=button] {
+    width: 100px;
+}

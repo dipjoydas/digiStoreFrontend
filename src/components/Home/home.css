@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+.homeBanner {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+    /* aspect-ratio: 2/1; */
+   
+    overflow: hidden;
+}
+.homeSlider {
+    position: relative;
+    width: 60%;
+    aspect-ratio: 2/1;
+    padding-right: 2rem;
+    flex:1 1 auto;
+
+}
+/* .compares {
+    width: 40%;
+    padding-left: 2rem;
+    border: solid black 2px;
+    flex:1 1 auto;
+
+} */
+
+/* slider responsive  */
+.homeSlider {
+    width: 100%;
+}
+/* compare filed design  */
+
+/* .compares .inputContainer {
+
+    background-color: #FFE8A1;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+.compares .inputContainer h4 {
+    font-size: 3rem;
+}
+.compares .inputContainer p{
+    font-size: 1.6rem;
+}
+
+.compares .inputContainer .compare {
+    width: 90%;
+    
+    margin: .7rem 0;
+} */
+.inputContainer .compreSubmit {
+    width: 90%;
+    border-radius: .6rem .6rem .6rem .6rem;
+    margin: .7rem 0;
+}
+/*----------------------------------------- subBanner design ----------------------------------------- */
+
+
+/* .compares .subBanner {
+    width: 100%;
+    height: 50%;
+}
+.compares .subBanner img {
+    width: 100%;
+    height: 100%;
+    
+
+} */
+/* -----------------------------------------------features category design ------------------------------------------------------ */
+.featuresCategories {
+    margin: 4rem 0;
+    text-align: center;
+}
+.featuresCategories h2 {
+    font-size: 3rem;
+}
+.featuresCategories p {
+    font-size: 1.6rem;
+}
+.featuresCategoryContainer {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px , 1fr));
+    grid-gap: 1.5rem;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .featuresCategoryContainer {
+        grid-template-columns: repeat(auto-fit ,minmax(100px ,1fr));
+       
+    }
+    
+}
+/* for phone ---------------------------------------------- */
+@media screen and (max-width:480px) {
+    .featuresCategoryContainer {
+        grid-template-columns: repeat(auto-fit ,minmax(70px ,1fr));
+        
+    }
+    
+}
+
+
+
+
+
+
+/* responsive ------------------------------------------------------------------ */
+@media screen and (max-width:1000px) {
+    .homeBanner{
+        flex-wrap: wrap;
+    
+    }
+    
+}

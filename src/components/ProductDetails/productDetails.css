@@ -1,0 +1,310 @@
+
+.PDTopBanner {
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    align-items: stretch;
+   
+   
+}
+.PDImgContainer {
+    padding-left: 2rem;
+    width: 40%;
+    text-align: center;
+    flex: 1 1 auto;
+}
+.PDImgContainer img {
+    position: relative;
+    width: 70%;
+    height: 80%;
+    top: 50%;      
+    transform: translateY(-50%);
+    
+}
+.PDTextContainer {
+    /* padding-left: 2rem; */
+    padding: 2rem;
+ 
+    width: 60%;
+    font-size: 1.5rem;
+    flex: 1 1 auto;
+}
+.PDTextContainer h1 {
+    font-size: 2.5rem;
+    margin-bottom: .6rem;
+}
+.PDPriceContainer {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.PDPriceContainer span {
+    display: inline-block;
+    min-width: 7rem;
+    background-color: rgb(63, 63, 148);
+    border-radius: 5rem;
+    /* border: solid red 2px; */
+    padding: .4rem 1.3rem;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    margin:  .6rem;
+}
+.PDTextContainer h3 {
+    font-size:2rem ;
+}
+.buynow {
+    /* width: 4rem; */
+    /* padding: 0; */
+    height: 3rem;
+    /* border: solid red 1px; */
+}
+.buynow span,input {
+    position: relative;
+    /* top: -1px; */
+    display: inline-block;
+    border: solid black 1px;
+    width: 4rem;
+    height: 100%;
+    /* font-size: 2rem; */
+    text-align: center;
+   
+
+}
+.buynow span {
+    cursor: pointer;
+
+}
+
+.buynow input {
+    top: 2.4px;
+}
+.buynow span:last-child {
+    top: .5rem;
+    height: 100%;
+    width: fit-content;
+    margin-left: .5rem;
+    border-radius: 5px;
+    padding: .6rem 1.5rem;
+    background-color:rgb(63, 63, 148) ;
+    color: white;
+    cursor: pointer;
+    
+}
+.navs .nav {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    margin: 2rem 0;
+    
+    
+}
+.navs .nav li{
+    border: solid red 1px;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin: .5rem 1rem;
+    background-color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+
+
+}
+.navs .nav li:hover {
+    background-color: orangered;
+    color: white;
+}
+/* specificationAndRecentlyViewedContainer design-------------------------------------------------------- */
+.specificationAndRecentlyViewedContainer {
+    display: flex;
+
+}
+.specificationContainer {
+    width: 80%;
+    padding: 2rem;
+    /* background-color: white; */
+}
+.recentlyViewedProducts {
+    width: 20%;
+}
+.tableContainer {
+    /* border: solid red 1px; */
+    background-color: white;
+}
+table , td,th{
+    /* border: 1px solid black ; */
+    border-top: .5px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3) ;
+
+     
+    
+    border-collapse: collapse;
+    
+}
+
+th , td {
+    padding: .8rem ;
+}
+table caption {
+    text-align: left;
+    font-size:3rem ;
+    font-weight:bolder;
+    margin-bottom: 2rem;
+}
+table {
+    width: 100%;
+    /* background-color: white; */
+}
+
+
+th {
+    text-align: left;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    color: #3749BB;
+    background-color: #F5F6FC;
+}
+tr {
+    font-size: 1.4rem;
+}
+tr:hover {
+    background-color: #FAFBFC;
+}
+.recentlyViewedProducts h3 {
+    font-size: 1.5rem;
+    padding: 1rem .4rem;
+}
+.rVPContainer {
+   
+    padding: .9rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.rVPContainer .itemContainer {
+    max-width: 20rem;
+    padding: 0 1rem ;
+    background: white;
+    margin: .8rem;
+    box-shadow: 1px 1px 3px gray;
+}
+.rVPContainer .itemContainer .imgContainer {
+    width: 100%;
+    height: 100%;
+}
+.rVPContainer .itemContainer .imgContaine img {
+    width: 100%;
+    height: 100%;
+}
+.rVPContainer .textContainer  h5{
+    color: orangered;
+
+}
+
+
+/* description part------------------------------------------------------------------------------------------  */
+
+.description {
+    background-color: white;
+    border: transparent solid   ;
+    padding: 2rem;
+    margin: 2rem;
+
+}
+.description p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    /* letter-spacing: 2px; */
+    word-spacing: 2px;
+    text-align: justify;
+}
+.description h1 {
+    margin: 3rem 0;
+    font-size: 3rem;
+    
+}
+
+
+/*-------------------------------------------------- reviews part ------------------------------------------ */
+ .reviews{
+    padding: 2rem;
+    text-align: center;
+ }
+ .reviews * {
+    font-size: 1.6rem;
+ }
+.reviews #Rheading {
+    font-size: 2rem;
+}
+.reviews p {
+    font-size: 1.2rem;
+}
+.reviews .average,.reviewIconAverage {
+    display: inline-block;
+    /* font-size: 2rem; */
+    /* padding: 2rem 0; */
+    margin: 2.5rem 0;
+
+}
+.review {
+    padding: 2rem;
+    margin: 3rem ;
+    background-color: white;
+    
+
+}
+.rating {
+    /* width: 50%; */
+    padding: 1rem 0;
+}
+.writeReview .submit {
+    border: none;
+    width: 200px;
+    background-color: orangered;
+    padding: 1.4rem;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+
+/* responsive --------------------------------------------------------- */
+
+@media screen and (max-width:790px) {
+   div .PDTopBanner {
+        /* flex-direction: column;
+        align-items: stretch; */
+        flex-wrap: wrap;
+      
+        
+    }
+    .PDTopBanner .PDImgContainer {
+        width: 100%;
+    }
+    .PDTopBanner .PDTextContainer {
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:1000px) {
+
+    .specificationAndRecentlyViewedContainer {
+        flex-wrap: wrap;
+    }
+    .specificationContainer {
+        width: 100%;
+    }
+    .recentlyViewedProducts {
+        width: 100%;
+    }
+    
+}
+
+

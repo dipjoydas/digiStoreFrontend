@@ -1,0 +1,32 @@
+.featuresProductsContainer {
+    margin-top: 20px;
+}
+.featuresProductsContainer h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.featuresProducts {
+    /* text-align: center; */
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    grid-gap: 1.5rem;
+}
+
+
+@media screen and (max-width:768px) {
+    .featuresProducts {
+        grid-template-columns: repeat(auto-fit ,minmax(200px ,1fr));
+       
+    }
+    
+}
+/* for phone ---------------------------------------------- */
+@media screen and (max-width:480px) {
+    .featuresProducts {
+        grid-template-columns: repeat(auto-fit ,minmax(150px ,1fr));
+        
+    }
+    
+}
