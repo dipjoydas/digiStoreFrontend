@@ -49,6 +49,9 @@ const Product = ({data ,addToCompare}) => {
                 <span>{oldPrice?oldPrice:''}$</span>
                 
             </div>
+            <div className='actionContainerCoverer'>
+
+            </div>
             <div className='actionContainer'>
                 <span onClick={() => handleAddToCart(_id, title, price, img, 1)}>Add to cart</span> <br />
                 <span onClick={()=>addToCompare(_id)}>Add to compare</span>

@@ -9,14 +9,14 @@ const SIgnUp = () => {
     const nameValue = useRef()
     const emailValue = useRef()
     const passValue = useRef()
-    const reTypePassValue = useRef()
+   
     const phoneValue = useRef()
     const handleSingUp =async(e)=>{
         e.preventDefault()
         const name = nameValue.current.value
         const email = emailValue.current.value
         const password = passValue.current.value
-        const reTypePass = reTypePassValue.current.value
+  
         const phone = phoneValue.current.value
         const user = {
             name,

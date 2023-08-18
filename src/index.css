@@ -70,6 +70,9 @@ button:focus-visible {
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 * {
   margin: 0;
   border: none;
@@ -80,16 +83,23 @@ button:focus-visible {
   box-sizing: border-box;
 }
 html {
-  max-width: 1320px;
+  /* max-width: 1320px; */
   font-size:62.5%;
   line-height: 1.5;
   overflow-x: hidden;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-family: sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   /* font-family: 'Poppins', sans-serif; */
   /* font-family: sans-serif; */
   
   
 }
 body {
+  /* max-width: 1320px; */
   background: #F2F4F8;
   overflow-x: hidden;
+  /* border: solid red 2px; */
 }

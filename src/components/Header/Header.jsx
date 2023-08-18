@@ -74,6 +74,26 @@ const Header = () => {
                     id: 1,
                     mainCategory: 'laptop-bag',
                     subCategory: ['max-green', 'hp','asus','msi']
+                },{
+                    id:2,
+                    mainCategory: 'laptop-accessories',
+                    subCategory: ['laptop-cooler', 'laptop-desk','laptop-stand','laptop-battery','laptop-charger','laptop-display','laptop-keyboard','laptop-locker']
+                },
+                {
+                    id:5,
+                    mainCategory:'dell',
+                },
+                {
+                    id:5,
+                    mainCategory:'asus',
+                },
+                {
+                    id:5,
+                    mainCategory:'lenevo',
+                },
+                {
+                    id:5,
+                    mainCategory:'hp',
                 },
                 
             ]
@@ -97,6 +117,63 @@ const Header = () => {
                     mainCategory: 'motherboard',
                     subCategory: ['gigabyte', 'msi','asus']
                 },
+                {
+                    id: 1,
+                    mainCategory: 'cup-cooler',
+                    subCategory: ['antec', 'lian-li','noctua','team','gamdias','corsair','msi','gigabyte','cougar','asus']
+                },{
+                    id:4,
+                    mainCategory:'grapics-card',
+                    subCategory:['colorful','asrock','asus','gigabyte','intel','msi','nvidia','zotac',]
+                }
+            ]
+           
+            
+        },{
+            id:4,
+            mainCategory:'phone',
+            subCategory:[
+                {
+                    id: 1,
+                    mainCategory: 'apple',
+                    
+                },
+                {
+                    id: 1,
+                    mainCategory: 'samsung',
+                    
+                },
+                {
+                    id: 1,
+                    mainCategory: 'google',
+                    
+                },
+                {
+                    id: 1,
+                    mainCategory: 'oneplus',
+                    
+                },
+                {
+                    id: 1,
+                    mainCategory: 'oppo',
+                    
+                },
+                {
+                    id: 1,
+                    mainCategory: 'vivo',
+                    
+                },
+                {
+                    id: 1,
+                    mainCategory: 'realme',
+                    
+                },
+                {
+                    id: 1,
+                    mainCategory: 'poco',
+                    
+                },
+
             ]
         },
         {

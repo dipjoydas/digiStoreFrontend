@@ -99,6 +99,7 @@ const useAuth = () => {
                 method:"POST",
                 headers:{
                     "content-Type": "application/json",
+                    mode: 'no-cors'
                 },
                 body:JSON.stringify({email,otpValue})
             })

@@ -1,5 +1,6 @@
 .featuresProductsContainer {
     margin-top: 20px;
+    
 }
 .featuresProductsContainer h1 {
     text-align: center;
@@ -17,7 +18,7 @@
 
 @media screen and (max-width:768px) {
     .featuresProducts {
-        grid-template-columns: repeat(auto-fit ,minmax(200px ,1fr));
+        grid-template-columns: repeat(auto-fit ,minmax(220px ,1fr));
        
     }
     

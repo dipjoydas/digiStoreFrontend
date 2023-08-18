@@ -1,4 +1,8 @@
-table , td ,tr {
+
+.compareContainer {
+    min-height: 100vh;
+}
+.compareContainer table ,.compareContainer td,.compareContainer tr {
     border: 1px solid rgba(0, 0, 0, 0.3);
    
 }

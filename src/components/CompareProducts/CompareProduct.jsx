@@ -156,7 +156,7 @@ const CompareProduct = () => {
   
   
     return (
-        <div>
+        <div className='compareContainer'>
             <div className='CPTableContainer'>
                 <table>
                     <thead>

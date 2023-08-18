@@ -5,6 +5,7 @@
     justify-content: center;
     /* align-items: center; */
     align-items: stretch;
+    background-color: white;
    
    
 }
@@ -42,7 +43,7 @@
 .PDPriceContainer span {
     display: inline-block;
     min-width: 7rem;
-    background-color: rgb(63, 63, 148);
+    background-color: orange;
     border-radius: 5rem;
     /* border: solid red 2px; */
     padding: .4rem 1.3rem;
@@ -87,9 +88,10 @@
     margin-left: .5rem;
     border-radius: 5px;
     padding: .6rem 1.5rem;
-    background-color:rgb(63, 63, 148) ;
+    background-color:orange ;
     color: white;
     cursor: pointer;
+    border: none;
     
 }
 .navs .nav {
@@ -103,7 +105,7 @@
     
 }
 .navs .nav li{
-    border: solid red 1px;
+    border: solid orange 1px;
     border-radius: .5rem;
     padding: .5rem 1rem;
     margin: .5rem 1rem;
@@ -115,7 +117,7 @@
 
 }
 .navs .nav li:hover {
-    background-color: orangered;
+    background-color: orange;
     color: white;
 }
 /* specificationAndRecentlyViewedContainer design-------------------------------------------------------- */
@@ -162,11 +164,11 @@ table {
 
 
 th {
-    text-align: left;
+    text-align: center;
     font-size: 1.6rem;
     border-radius: .5rem;
-    color: #3749BB;
-    background-color: #F5F6FC;
+    color: white;
+    background-color: black;
 }
 tr {
     font-size: 1.4rem;
@@ -202,7 +204,7 @@ tr:hover {
     height: 100%;
 }
 .rVPContainer .textContainer  h5{
-    color: orangered;
+    color: orange;
 
 }
 
@@ -234,6 +236,7 @@ tr:hover {
  .reviews{
     padding: 2rem;
     text-align: center;
+    background-color: white;
  }
  .reviews * {
     font-size: 1.6rem;
@@ -265,14 +268,16 @@ tr:hover {
 .writeReview .submit {
     border: none;
     width: 200px;
-    background-color: orangered;
+    background-color: orange;
     padding: 1.4rem;
     border-radius: 5px;
     color: white;
     cursor: pointer;
 
 }
-
+textarea {
+    border: solid gray .5px;
+}
 
 
 /* responsive --------------------------------------------------------- */

@@ -4,11 +4,19 @@
     /* width: 250px; */
     /* border: solid red 2px; */
     padding: .8rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.5;
-    max-width: 400px;
+    width: 100%;
+    position: relative;
+    
+    /* max-width: 350px; */
+    max-width: 90vw;
+    /* min-width: 250px; */
     background-color: white;
    
+}
+.productContainer:hover {
+    box-shadow: 2px 2px 7px rgba(128, 128, 128, 0.745), -2px -2px 7px rgba(128, 128, 128, 0.745);
 }
 .productContainer h3 {
     font-size: 1.4rem;
@@ -16,9 +24,13 @@
 .imgContainer {
     width: 100%;
     padding: .5rem;
+    overflow: hidden;
+   
 }
+
 ul {
     /* list-style-type: circle; */
+   
     list-style: inside;
 }
 li {
@@ -35,26 +47,34 @@ li {
 .priceContainer span:last-child {
     text-decoration: line-through;
 }
+.actionContainerCoverer {
+    height:6rem ;
+}
 .actionContainer {
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    right: 4px;
    
  
 }
 .actionContainer span {
-    color: blue;
+    color: white;
     font-weight: bold;
-    background-color: rgba(35, 35, 181, 0.185);
+    background-color: orange;
     border-radius: 2px;
     display: inline-block;
     height: 3rem;
     width: 100%;
     font-size: 1.5rem;
+    font-weight: normal;
     /* line-height: 1.5; */
     /* border: solid blue 1px; */
     margin-bottom: .5rem;
     cursor: pointer;
 }
 .actionContainer span:hover {
-    background-color: blue;
+    background-color: black;
     color: white;
 }

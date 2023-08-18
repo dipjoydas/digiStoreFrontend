@@ -94,7 +94,7 @@ const ProductDetails = () => {
 
     }
     //--------------------------------------------- style rating icon ------------------------------------------------
-    const [avgRating, setAvgRating] = useState()
+    const [avgRating, setAvgRating] = useState(0)
     useEffect(() => {
         setDisplayReview(reviews)
 
@@ -109,7 +109,12 @@ const ProductDetails = () => {
             })
      
             let avgRating = Math.ceil((ratingSum / reviewLength))
-            setAvgRating(avgRating)
+            if(isNaN(avgRating)){
+                setAvgRating(0)
+            }else {
+                setAvgRating(avgRating)
+            }
+            
 
 
             const reviewsContainer = document.getElementsByClassName('reviews')[0]
@@ -254,7 +259,7 @@ const ProductDetails = () => {
 
 
     return (
-        <div style={{ background: "#F2F4F8" }}>
+        <div >
             <div className='PDTopBanner'>
                 <div className='PDImgContainer'>
                     <img src={"https://digi-storebackend.vercel.app/getimage/" + img} alt="" />
@@ -350,7 +355,7 @@ const ProductDetails = () => {
                                 <img src={`https://digi-storebackend.vercel.app/getimage/${rvp.img}`} alt="" />
                             </div>
                             <div className='textContainer'>
-                                <Link to={`/productdetails/${rvp.id}`}>{rvp.title}</Link>
+                                <Link to={`/productdetails/${rvp._id}`}>{rvp.title}</Link>
                                 <h5>${rvp.price}</h5>
                             </div>
                         </div>)}

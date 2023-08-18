@@ -1,42 +1,54 @@
-.featuresProductContainer {
-    width: 300px;
-    height: 300px;
-    max-width: 80vw;
-    margin: 20px;
-    /* border: solid red 2px; */
-    /* padding: 20px; */
+.featureProductContainer {
+    width: 100%;
+    /* height: 350px; */
+    height: fit-content;
+    background-color: white;
     position: relative;
+    overflow: visible;
     box-shadow: 2px 2px 3px gray, -2px -2px 3px rgba(128, 128, 128, 0.745);
+    transform: translateY(10rem) scale(.5);
+    transition: all 1s;
+    opacity: .5;
 
 }
-.featuresProductContainer:hover {
+.featureProductContainer.showAnimate {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+
+    
+}
+.featureProductContainer:hover {
     box-shadow: 2px 2px 7px rgba(128, 128, 128, 0.745), -2px -2px 7px rgba(128, 128, 128, 0.745);
 }
 
-.featuresImgContainer {
+.featureImgContainer {
     width: 100%;
-    height: 70%;
+    height: 50%;
+    height: 200px;
     position: relative;
     overflow: hidden;
-    transition: scale 2s;
+    transition: scale .5s ;
+    
 
 }
-.featuresProductContainer:hover .img2 {
+/* .featureProductContainer:hover .img2 {
    
     opacity: 0;
-} 
-.featuresProductContainer:hover .img1 {
+}  */
+.featureProductContainer:hover .img1 {
+
     
      transform: scale(1.2);
      transition-duration: .5s;
      transition-delay: .2s;
 
 }
+    
 
-.featuresImgContainer img {
+.featureImgContainer img {
     width:100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
 }
 .featureTextContainer  *{
@@ -76,7 +88,8 @@
     left: 50%;
     transform: translate(-50% ,-50%);
     /* right: 5%; */
-    color: gray;
+    /* color: gray; */
+    color: black;
     width: 20px;
     height: 20px;
 }
@@ -87,7 +100,7 @@
 }
 
 
-.featuresProductContainer:hover .iconContainer {
+.featureProductContainer:hover .iconContainer {
     visibility: visible;
 }
 /* tooltip design */
@@ -125,11 +138,11 @@
 
 /* text container design */
 .featureTextContainer {
-    padding: 20px;
+    padding:0 2rem 2rem 2rem;
 
 }
 .featureTextContainer h3 {
-    font-size: 20px;
+    font-size: 1.6rem;
 }
 
 /* add to cart design */
@@ -138,16 +151,19 @@
     padding: 10px 0;
     background: orange;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     color: white;
 }
-.featuresProductContainer:hover .addToCart {
+.featureProductContainer:hover .addToCart {
     background-color: black;
 
+}
+.titleLink {
+    color: black;
 }
 
 /* media queries  */

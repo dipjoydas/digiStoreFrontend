@@ -93,7 +93,8 @@
 
 .header2 {
     height: 5rem;
-    border: solid black 1px;
+    box-shadow: 2px 2px 5px gray;
+    border: solid gray 1px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -302,7 +303,8 @@
     background-color:#eee ;
     width: 200px;
     max-width: 80vw;
-    animation: animateLeftToRight 1s  linear;
+    animation: animateLeftToRight .4s  linear;
+    
 }
 .accordionContainer {
     color: black;
@@ -335,7 +337,7 @@
     text-align: left;
     border: none;
     outline: none;
-    transition: 0.4s;
+    transition: 0.3s;
   }
 
 
@@ -426,7 +428,18 @@
     background:black ;
     z-index: 1000;
   }
+  .resHeader2 *{
+    font-size: 1.2rem;
 
+  }
+@media all and (max-width:350px) {
+    .resHeader2 *{
+        font-size: 1rem;
+    
+      }
+    
+    
+}
 
 
 

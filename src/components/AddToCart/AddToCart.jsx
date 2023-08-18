@@ -101,14 +101,14 @@ const AddToCart = ({ hideCart }) => {
 
 
             </div>
-            <div>
+            {/* <div>
 
                 {
 
-                    displayCart.map(product => product.quantity)
+                    // displayCart.map(product => product.quantity)
 
                 }
-            </div>
+            </div> */}
 
 
         </div>
