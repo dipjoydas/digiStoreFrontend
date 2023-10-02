@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useAuthContext } from '../../context/Auth_context';
 import { useNavigate } from 'react-router-dom';
 import './verifyEmail.css'
@@ -7,7 +7,33 @@ const VerifyEmail = () => {
     const { verifyEmail } = useAuthContext()
     const navigate = useNavigate()
     const otp = useRef()
+    const [timer ,settimer]=useState(120)
+
+    useEffect(()=>{
+        document.getElementById('resendOptBtn').style.background = 'gray'
+        const interval = setInterval(()=>{
+            if(timer){
+                settimer(timer-1)
+            }else {
+                clearInterval(interval)
+            }
+        },1000) 
+        return ()=>clearInterval(interval)
+        
+
+    },[timer])
+   const handleResendOptButton =()=>{
+    setTimeout(()=>{
+        document.getElementById('resendOptBtn').disabled =false
+        document.getElementById('resendOptBtn').style.background = 'orange'
+
+    },2000*120)
+   }
+   handleResendOptButton()
     const handleResendOtp =async()=>{
+        document.getElementById('resendOptBtn').disabled =true 
+        document.getElementById('resendOptBtn').style.background = 'gray'
+        handleResendOptButton()
         try{
             const email = JSON.parse(localStorage.getItem("email"))
          
@@ -21,31 +47,14 @@ const VerifyEmail = () => {
                 body:JSON.stringify({email})
             })
             const result =await res.json()
-            console.log(result)
+            // console.log(result)
 
         }catch(error){
-            console.log(error)
+            // console.log(error)
 
         }
 
     }
-
-    // useEffect(() => {
-    //     const timer = () => {
-    //         let timeRemaining = 90
-    //         timeRemaining = timeRemaining - 1
-    //         setCounter(timeRemaining)
-    //         if (timeRemaining == 0) {
-    //             return
-    //         }
-        
-
-    //         setTimeout(timer, 1000)
-    //     }
-    //     timer()
-
-
-    // })
     const handleVerify = async (e) => {
         e.preventDefault()
         const otpValue = otp.current.value
@@ -65,8 +74,8 @@ const VerifyEmail = () => {
                     <input ref={otp} type="text" name="" id="" placeholder='opt' />
                     <input type="submit" value="submit" />
                 </form>
-                <h3>Do not get ?</h3>
-                <input onClick={handleResendOtp} type="submit" value="Resend Opt" />
+                <h3>Do not get? resend after {timer} seconds</h3>
+                <input onClick={handleResendOtp} type="submit" value="Resend Opt" id='resendOptBtn' disabled />
                 {/* <button onClick={handleResendOtp}>Resend Otp</button> */}
             </div>
 

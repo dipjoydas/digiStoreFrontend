@@ -29,9 +29,9 @@ const useAuth = () => {
                             }
                         })
                         const result = await res.json()
-                        console.log(result, 'page refresh')
+                        // console.log(result, 'page refresh')
                         setUser(result)
-                        console.log(user, 'form first load of page ')
+                        // console.log(user, 'form first load of page ')
     
                         // loading = false
                         setLoading(false)
@@ -69,9 +69,10 @@ const useAuth = () => {
             }
             )
             const result = await res.json()
+          
             if(result.result === "success"){
                 localStorage.setItem("email",JSON.stringify(user.email))
-                return true
+                return result
 
             }
             
@@ -85,6 +86,7 @@ const useAuth = () => {
 
 
         } catch (error) {
+            return result
 
         }
 
@@ -104,7 +106,7 @@ const useAuth = () => {
                 body:JSON.stringify({email,otpValue})
             })
             const result =await res.json()
-            console.log(result,'result from useauth')
+            // console.log(result,'result from useauth')
             setUser(result.user)
             
             const token = `Bearer ${result.token}`
@@ -150,7 +152,7 @@ const useAuth = () => {
 
 
         } catch (error) {
-            console.log(error)
+            // console.log(error)
 
         }
 
