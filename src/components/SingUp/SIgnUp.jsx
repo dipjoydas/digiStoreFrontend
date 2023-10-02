@@ -20,8 +20,8 @@ const SIgnUp = () => {
         setEmailInfo('')
         setVerifyPageLink('')
         try{
-            // const res = fetch(`https://digi-storebackend.vercel.app/emailcheck/${password}`)
-            const res =await fetch(`http://localhost:5000/emailcheck/${email}`)
+            const res =await fetch(`https://digi-storebackend.vercel.app/emailcheck/${email}`)
+            // const res =await fetch(`http://localhost:5000/emailcheck/${email}`)
             const result =await res.json()
             // console.log(result,"email infe")
             if((result.email?.length>0) && (result.email[0]?.status =="active")){
