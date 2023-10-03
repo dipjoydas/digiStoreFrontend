@@ -30,12 +30,12 @@ const Checkout = () => {
 
     }
 
-    const handleVoucher = () => {
-        let deduct = 100
-        let net = total - deduct
-        setNet(net)
+    // const handleVoucher = () => {
+    //     let deduct = 100
+    //     let net = total - deduct
+    //     setNet(net)
 
-    }
+    // }
     const { displayCart } = useCartContext()
     const { user } = useAuthContext()
    
@@ -129,11 +129,11 @@ const Checkout = () => {
 
 
                 </div>
-                <div className='voucherContainer'>
+                {/* <div className='voucherContainer'>
                     <input type="text" name="" id="" />
                     <input type="button" value="apply voucher" onClick={handleVoucher} />
 
-                </div>
+                </div> */}
             </div>
 
             <div className='orderOverview'>

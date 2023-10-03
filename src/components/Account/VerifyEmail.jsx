@@ -8,9 +8,14 @@ const VerifyEmail = () => {
     const navigate = useNavigate()
     const otp = useRef()
     const [timer ,settimer]=useState(120)
-
     useEffect(()=>{
         document.getElementById('resendOptBtn').style.background = 'gray'
+        document.getElementById('resendOptBtn').disabled =true
+
+    },[])
+
+    useEffect(()=>{
+      
         const interval = setInterval(()=>{
             if(timer){
                 settimer(timer-1)
@@ -24,8 +29,10 @@ const VerifyEmail = () => {
     },[timer])
    const handleResendOptButton =()=>{
     setTimeout(()=>{
-        document.getElementById('resendOptBtn').disabled =false
+       
         document.getElementById('resendOptBtn').style.background = 'orange'
+        document.getElementById('resendOptBtn').disabled =false
+        
 
     },2000*120)
    }
@@ -33,6 +40,9 @@ const VerifyEmail = () => {
     const handleResendOtp =async()=>{
         document.getElementById('resendOptBtn').disabled =true 
         document.getElementById('resendOptBtn').style.background = 'gray'
+        settimer(120)
+        handleResendOptButton()
+        window.alert("works")
         handleResendOptButton()
         try{
             const email = JSON.parse(localStorage.getItem("email"))
@@ -75,8 +85,8 @@ const VerifyEmail = () => {
                     <input type="submit" value="submit" />
                 </form>
                 <h3>Do not get? resend after {timer} seconds</h3>
-                <input onClick={handleResendOtp} type="submit" value="Resend Opt" id='resendOptBtn' disabled />
-                {/* <button onClick={handleResendOtp}>Resend Otp</button> */}
+                <input onClick={handleResendOtp} type="submit" value="Resend Opt" id='resendOptBtn'  />
+                {/* <button onClick={handleResendOtp} id='resendOptBtn'>Resend Otp</button> */}
             </div>
 
         </div>

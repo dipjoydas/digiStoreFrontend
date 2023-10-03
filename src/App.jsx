@@ -43,6 +43,13 @@ function App() {
         },{
           path:'/forgetpassword',
           element:<ForgetPassword></ForgetPassword>
+        },{
+          path:'/offers',
+          element:<div>No available offers</div>
+        },
+        ,{
+          path:'/deal',
+          element:<div>No available special deals</div>
         },
         {
           path:'/account',
